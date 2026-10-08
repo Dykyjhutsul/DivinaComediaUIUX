@@ -1,0 +1,17 @@
+﻿# Secrets / local
+.env
+.env.*
+!.env.example
+*.local
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Figma tooling caches (if any)
+figma-ui-inventory.json
+figma-ui-inventory.md
+figma-comment-plan.json
+figma-comment-status.json
