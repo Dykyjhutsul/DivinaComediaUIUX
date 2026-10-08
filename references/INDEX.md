@@ -1,6 +1,6 @@
 # References INDEX
 
-> Оновлено: 2026-10-08 — + дерево Раю (desktop/mobile) і D03 product-UI реф PO. Попередньо 2026-10-07 — + фон Home-порталу (`home-portal-bg.png`, кластер C).
+> Оновлено: 2026-10-08 — + спіраль Раю (desktop/mobile) — атмосфера категорій F-4.3 / F-4.6 / F-4.10 (F-4.2 лишається на дереві). Раніше 2026-10-08 — + дерево Раю (desktop/mobile) і D03 product-UI реф PO. Попередньо 2026-10-07 — + фон Home-порталу (`home-portal-bg.png`, кластер C).
 > `references/keep/` — source of truth. У `clusters/` — **копії**.
 > Візуальні мотиви (згруповано): [`MOTIFS.md`](MOTIFS.md).
 
@@ -11,9 +11,9 @@
 | **A** | `clusters/A-atmosphere-cosmic/` | 30 | mood — шари світів, nebula, золоті кільця, світлові стовпи |
 | **B** | `clusters/B-atmosphere-organic/` | 27 | mood — world tree, бібліотеки, прірва, земля/кістка/сад + дерево Раю (PO) |
 | **C** | `clusters/C-atmosphere-modern-surreal/` | 14 | mood — портали, shattered/modern surreal, матеріали інтер’єру |
-| **D** | `clusters/D-product-ui/` | **2** | UI — D03 Paradise desktop/mobile (PO 2026-10-08); треба ще ≥6 |
+| **D** | `clusters/D-product-ui/` | **3** | UI — D03 Paradise desktop/mobile + D03 spiral (PO 2026-10-08); треба ще ≥6 |
 
-Keep total: **73** зображень. Unmapped: **0**.
+Keep total: **75** зображень. Unmapped: **0**.
 
 ## Gap: product-UI (D)
 
@@ -115,6 +115,8 @@ D03 (Досягнення / Paradise) закрито PO-рефом. Решта D
 | `paradise-tree-bg-mobile.png` | Той самий мотив, mobile 390 crop | low |
 | `sinners-bg-desktop.png` | **Фон Грішників (PO 2026-10-08):** кривавий місяць, замок, троянди, desktop. Page atmosphere F-4.13 / `DC-ACH-012` | low |
 | `sinners-bg-mobile.png` | Той самий мотив, mobile 390 crop | low |
+| `paradise-spiral-bg-desktop.png` | **Фон категорій Раю (PO 2026-10-08):** золота спіраль-гелікс на nebula, desktop 1440. Page atmosphere F-4.3 / F-4.6 / F-4.10 (нова `DC-ACH` атмосфера; F-4.2 лишається на дереві) | low |
+| `paradise-spiral-bg-mobile.png` | Той самий мотив, mobile 390 crop | low |
 
 ## C — atmosphere-modern-surreal (13)
 
@@ -141,6 +143,7 @@ D03 (Досягнення / Paradise) закрито PO-рефом. Решта D
 |------|---------|-------------|
 | `d03-achievements-paradise-desktop.png` | **PO 2026-10-08:** Досягнення на дереві Раю — H1, pill «Грішники», сітка 4×, прогрес-бар. Підзаголовок у рефі **не брати** (F-4.2 C-5) | low |
 | `d03-achievements-paradise-mobile.png` | Той самий клімат, 2 колонки, pill під H1 | low |
+| `d03-achievements-paradise-spiral-desktop.png` | **PO 2026-10-08:** F-4.3 на золотій спіралі — H1 «Fun & Party» + прогрес, пошук + фільтри, pill «Запропонувати ачівку», сітка 3× з inline confirm/cancel. Атмосфера категорій (≠ дерево F-4.2) | low |
 
 ## Топ для moodboard (рекомендація)
 

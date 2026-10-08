@@ -63,7 +63,8 @@
 - Header: золота 4-кінцева зірка + wordmark зліва, аватар з тонким золотим кільцем справа
 - Carousel: стрілки-кола, dots (активна — accent)
 - Cards: лише інтерактивні контейнери — без декоративних карток
-- Paradise destination (Досягнення): `DC-ACH-010` дерево на `zone/void`; картка `DC-ACH-001` = `zone/card` + золотий прогрес; «Грішники» = pill `DC-ACH-008` (зірка + стрілка), не картка в сітці
+- Paradise destination (каталог Досягнень, F-4.2): `DC-ACH-010` дерево на `zone/void`; картка `DC-ACH-001` = `zone/card` + золотий прогрес; «Грішники» = pill `DC-ACH-008` (зірка + стрілка), не картка в сітці
+- Paradise category screens (F-4.3 / F-4.6 / F-4.10): `DC-ACH-013` золота спіраль-гелікс на `zone/void` — окрема атмосфера категорій (PO 2026-10-08); перехід із каталогу (дерево) у категорію (спіраль). Та сама система карток / кнопок / типу
 - Sinners page (F-4.13 only): `DC-ACH-012` blood-moon atmosphere; Color mode `Sinners` (`bg/surface` wine/900 `#14080E`, `border/default` red/600 at 40%). Same buttons, radii, and type as the rest of the kit. Not the Standup Inferno zone.
 - Header на атмосфері: ghost / прозорий, не суцільний `#121212` брус, що ріже дерево
 
@@ -87,7 +88,8 @@
 ## Attachments for Astra
 
 - Styleguide: [`styleguide-dark-app-v1.png`](styleguide-dark-app-v1.png)
-- Paradise page atmosphere: [`../references/keep/paradise-tree-bg-desktop.png`](../references/keep/paradise-tree-bg-desktop.png) · mobile [`../references/keep/paradise-tree-bg-mobile.png`](../references/keep/paradise-tree-bg-mobile.png)
+- Paradise page atmosphere (каталог F-4.2): [`../references/keep/paradise-tree-bg-desktop.png`](../references/keep/paradise-tree-bg-desktop.png) · mobile [`../references/keep/paradise-tree-bg-mobile.png`](../references/keep/paradise-tree-bg-mobile.png)
+- Paradise category atmosphere (F-4.3 / F-4.6 / F-4.10): [`../references/keep/paradise-spiral-bg-desktop.png`](../references/keep/paradise-spiral-bg-desktop.png) · mobile [`../references/keep/paradise-spiral-bg-mobile.png`](../references/keep/paradise-spiral-bg-mobile.png)
 - Paradise product-UI ref (IA + climate; **no subtitle** — spec C-5): [`../references/clusters/D-product-ui/d03-achievements-paradise-desktop.png`](../references/clusters/D-product-ui/d03-achievements-paradise-desktop.png)
 - Moodboard file(s): —
 - Product-UI moodboard: —
