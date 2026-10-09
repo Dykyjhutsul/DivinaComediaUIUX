@@ -1,6 +1,6 @@
 # COMPONENT-IDS — реєстр компонентів UI Kit
 
-> Version: 1.11 · 2026-10-09 (DC-ROOM-028…031 лобі ведучого; ще не зібрані у Figma) · попередньо 1.10 (DC-ROOM-027) · Figma: [DivinaComediaUIKit](https://www.figma.com/design/7VS64TZ3mjVvxoaYF6ZHDk/DivinaComediaUIKit?node-id=0-1) (`fileKey 7VS64TZ3mjVvxoaYF6ZHDk`)
+> Version: 1.12 · 2026-10-09 (лобі F-5.2: ROOM-028…029, 031, 032 зібрані локально) · попередньо 1.11 (028…031 ще без Figma node) · Figma: [DivinaComediaUIKit](https://www.figma.com/design/7VS64TZ3mjVvxoaYF6ZHDk/DivinaComediaUIKit?node-id=0-1) (`fileKey 7VS64TZ3mjVvxoaYF6ZHDk`)
 > Джерела: BA [`docs/design/figma-make-moodboards-uikit.md`](../../DivinaComedia/docs/design/figma-make-moodboards-uikit.md) · [`briefs/screens-ux.md`](../briefs/screens-ux.md) · [`briefs/home-ux-locked.md`](../briefs/home-ux-locked.md) · D-промпти [`prompts/03-d-product-ui/`](../prompts/03-d-product-ui/)
 > Поверхня: **Front (Web)** — desktop 1440 (host / TV) · mobile 390 (player). CMS — поза kit (збирається з бібліотеки компонентів).
 
@@ -165,11 +165,11 @@
 | DC-ROOM-005 | Join Landing State | in progress/invalid/not found/full/auth/blocked/error | P2 | F-5.5 VS-01…09 | `26:352` |
 | DC-ROOM-006 | Player Chip | avatar + nickname · host marker · `ready` ready/waiting · offline. Лобі F-5.2/F-5.3 більше не чіпом — картка сітки це ROOM-029 | P1 | F-5.2 · F-5.3 | `16:49` |
 | DC-ROOM-007 | Player Roster | заголовок + лічильник + Player Chip list · empty. Лобі F-5.2 — секція ROOM-030, без порожнього абзацу | P1 | F-5.2 · F-5.3 · D05 · D06 | `16:88` |
-| DC-ROOM-008 | Ready Indicator | ready / not ready. У сітці лобі не використовувати: готова — кругла галочка `DC-ACH-003`, очікує — `DC-ROOM-027` Waiting | P2 | D05 | `26:477` |
+| DC-ROOM-008 | Ready Indicator | ready / not ready. У сітці лобі F-5.2 стан показує `DC-ROOM-029`: іконка `DC-ROOM-027` Ready або Waiting і слово «Готовий» / «Готова» / «Очікує» | P2 | D05 | `26:477` |
 | DC-ROOM-009 | Game Card | назва · опис · min–max гравців · теги · selected | P1 | F-5.8 · D04 | `17:107` |
 | DC-ROOM-010 | Selected Game Summary | назва + meta + «Змінити гру» / «Гру не обрано». У лобі F-5.2 назва гри в заголовку, не в цій картці | P2 | F-5.8 V-2 · D05 | `26:484` |
 | DC-ROOM-011 | Lobby Settings Panel | таймер · кількість питань. Замінено на ROOM-031: набір полів бере гра | P2 | F-5.7 | `26:521` |
-| DC-ROOM-012 | Host Control Bar | lobby (Start disabled/enabled) · session (Next / End). Старт лобі живе в правій секції ROOM-030, не окремою смугою на всю ширину | P1 | F-5.9 · D05 · D07 | `16:142` |
+| DC-ROOM-012 | Host Control Bar | lobby (Start disabled/enabled) · session (Next / End). Старт лобі — нижня смуга: підказка хто не готовий і «Почати гру». Неактивний — `DC-BASE-001` Secondary Size L, усі готові і ≥3 — Primary Size L | P1 | F-5.9 · D05 · D07 | `16:142` |
 | DC-ROOM-013 | Host Session Shell | TV 1440 frame | P2 | F-5.16 · D07 | `31:546` |
 | DC-ROOM-014 | Player Session Shell | mobile 390 frame | P2 | F-5.17 | `31:732` |
 | DC-ROOM-015 | Prompt Card | prefix + statement · meta · `size` host/player | P1 | F-6.1 · D07 | `17:186` |
@@ -184,11 +184,12 @@
 | DC-ROOM-024 | Catalog Game Card | назва · опис · діапазон · один тег · 18+ (`Show adult`); `State` Default/Selected. Публічний каталог, не лобі (лобі лишається ROOM-009) | P1 | F-6.53 | kit `105:1622` · local `444:13837` |
 | DC-ROOM-025 | Selected Catalog Game | «Обрана гра» + чотири дії (створити кімнату, долучитися по коду, історія ігор, детальніше правила); `Size` Desktop/Mobile; ті самі текстові властивості, що в ROOM-024 | P1 | F-6.53 | kit `105:1735` · local `444:14444` |
 | DC-ROOM-026 | Catalog Atmosphere | `Crop` Desktop 1440 / Mobile 390 — райські арки в хмарах, низ темний; абсолютний фон каталогу, не дерево досягнень (ACH-010) і не спіраль категорій (ACH-013) | P1 | F-6.53 | kit `105:1738` · local `444:13808` |
-| DC-ROOM-027 | Lobby Icon | `Icon` Copy / Share / Kick / Waiting. Без підпису. `Ready` у сеті не ставити на картку: готова — кругла галочка як у `DC-ACH-003` Confirmed | P1 | F-5.2 · F-5.3 · F-5.19 | kit `111:1594` · local `482:2121` |
-| DC-ROOM-028 | Lobby Invite | Один ряд на всю ширину контенту. Зліва: QR компактний, код 6 символів, `DC-ROOM-027` Copy, кнопки «Telegram» і «WhatsApp», `DC-ROOM-027` Share. Справа, притиснуто до краю: `Role=Host` — `DC-BASE-001` danger «Скасувати кімнату»; `Role=Player` — secondary «Покинути кімнату». Висота правої кнопки = висота іконок ряду (не Size L). Посилання текстом немає | P1 | F-5.2 · F-5.3 · F-5.12 · F-5.18 | — |
-| DC-ROOM-029 | Lobby Player Tile | Комірка сітки: `DC-BASE-014` · ім'я · мітка «ведучий» лише в Host · стан готовності (галочка `DC-ACH-003` або Waiting `DC-ROOM-027`) · кік `DC-ROOM-027` лише на гравці і лише коли `Role=Host`. Без слів «Виключити» / «Готовий» | P1 | F-5.2 · F-5.3 · F-5.19 | — |
-| DC-ROOM-030 | Lobby Split | Дві секції в ряд на 1440. Ліва «Гравці»: два лічильники «Учасники N» і «Готові M», сітка ROOM-029 по 3, скрол від ~20. Права «Налаштування»: ROOM-031 і під ним «Почати гру» (`DC-BASE-001` primary Size L, `State` disabled/default). Не стовпчик на всю сторінку | P1 | F-5.2 · F-5.9 | — |
-| DC-ROOM-031 | Lobby Settings Summary | Read-only поля обраної гри + secondary «Налаштування» (лише Host). `Game=NHIE`: Категорії (без «Грішники»), Складність (Усі / Легко / Середньо / Важко), Питань ∈ {5, 10, 15, 20}, Таймер ∈ {0, 5, 10, 15, 30, 60}, 0 = «Без таймера». `Game=Quiz`: Питань 5–20, Таймер ∈ {0, 30, 60, 120, 300}. Гравець бачить ті самі рядки без кнопки редагування | P1 | F-5.7 · F-6.1 · F-6.2 | — |
+| DC-ROOM-027 | Lobby Icon | `Icon` Copy / Share / Kick / Ready / Waiting. На картці лобі Ready і Waiting стоять поруч зі словом стану. Share у запрошці лобі не використовується | P1 | F-5.2 · F-5.3 · F-5.19 | kit `111:1594` · local `482:2121` |
+| DC-ROOM-028 | Lobby Invite | `Size=Desktop`: вертикальна картка. QR на всю ширину блоку, код + Copy, Telegram і WhatsApp (`DC-BASE-001` Secondary S), знизу на всю ширину червоне Primary L «Скасувати кімнату». Без системного поширення. `Size=Mobile`: компактний ряд «Код кімнати» + ABC123 + Copy + кнопка QR. Скасування на мобільному не в цій картці — червоний текст біля заголовка | P1 | F-5.2 · F-5.3 · F-5.12 · F-5.18 | local `510:1751` |
+| DC-ROOM-029 | Lobby Player Tile | `Who=Host`: аватар `DC-BASE-014` Ring On, ім'я, мітка «ведучий», стан без кіка. `Who=Player`: той самий ряд, кік `DC-ROOM-027` справа. Стан — іконка Ready/Waiting і слово «Готовий» / «Готова» / «Очікує». Сітка desktop — 3 колонки (~348), mobile — вертикальний список | P1 | F-5.2 · F-5.3 · F-5.19 | local `510:1752` |
+| DC-ROOM-030 | Lobby Shell | Не спліт «гравці зліва / налаштування справа». Desktop: колонка запрошення `DC-ROOM-028` і основна колонка — лічильники «Учасники N / max» і «Готові M / N», сітка `DC-ROOM-029`, картка правил `DC-ROOM-032`, картка параметрів `DC-ROOM-031`, знизу смуга старту `DC-ROOM-012`. Mobile: заголовок + скасування, компактне запрошення, список, знизу «Запросити» і старт. Фон сторінки — шахова партія на штормі (CROP, верх-право), не `DC-ROOM-026`. Текст на фото сидить на картці `#1D2022` / бордер `#3D4246`; мобільна шапка — `#121212` | P1 | F-5.2 · F-5.9 | — |
+| DC-ROOM-031 | Lobby Settings Summary | Картка surface: заголовок «Параметри гри» + secondary «Налаштування» (лише Host) і read-only поля. `Game=NHIE`: Категорії (без «Грішники»), Складність (Усі / Легко / Середньо / Важко), Питань ∈ {5, 10, 15, 20}, Таймер ∈ {0, 5, 10, 15, 30, 60}, 0 = «Без таймера». `Game=Quiz`: Питань 5–20, Таймер ∈ {0, 30, 60, 120, 300}. Гравець бачить ті самі рядки без кнопки | P1 | F-5.7 · F-6.1 · F-6.2 | local `510:1750` |
+| DC-ROOM-032 | Lobby Rules | Картка surface «Як грати» і короткий текст правил (1–500 символів). Той самий фон і бордер, що в ROOM-031, щоб рядок не зливався з фото | P1 | F-5.2 · F-5.3 | local `510:1732` |
 
 ## DC-STD — Standup / theory / improv
 
