@@ -11,6 +11,10 @@ BA / поведінка: `../DivinaComedia/docs/ba/` (або абсолютни�
 UX must-show екранів: [`briefs/screens-ux.md`](briefs/screens-ux.md).
 Home IA lock (головна на `/`, портал з трьох дверей): [`briefs/home-ux-locked.md`](briefs/home-ux-locked.md) · like/dislike концептів: [`briefs/home-concepts-feedback.md`](briefs/home-concepts-feedback.md).
 
+## Доставка
+
+Jira для цього проєкту не використовується (рішення 2026-10-10, те саме в BA і в застосунку). Статус екрана — у Figma і в журналі цього файлу, не в тікетах.
+
 ## Hard constraints
 
 1. **No medieval Dante UI** — без ілюмінованих манускриптів, херувимів/демонів як маскотів, gothic ornament як системи.
