@@ -133,7 +133,7 @@
 | DC-AUTH-003 | Profile Header | own (з email); праворуч «Вийти» + «Деактивувати акаунт»; без edit CTA | P2 | F-3.1 | kit `40:1386` · local `401:1316` |
 | DC-AUTH-004 | Profile Stats Strip | вечори · drills · турніри | P2 | BA kit §5 | `40:1397` |
 | DC-AUTH-005 | Public Profile Header | без email | P2 | BA kit §5 | `40:1392` |
-| DC-AUTH-006 | Achievement Showcase Grid | Completed на профілі: title · category · difficulty · «Виконали N%»; `State` Filled/Empty · `Size` Desktop/Mobile; без «Усі ачівки» і без write | P2 | F-3.1 C-3/C-6 | kit `40:1407` · local `401:1535` |
+| DC-AUTH-006 | Achievement Showcase Grid | Completed на профілі: title · category · difficulty · «Виконали N%»; `State` Filled/Empty · `Size` Desktop/Mobile; без «Усі ачівки» і без write. Картка `Showcase Item` (`401:1332`): опційні `Date` + `Show date` (default off — F-3.1 без дати) | P2 | F-3.1 C-3/C-6 · F-4.7 | kit `40:1407` · local `401:1535` |
 | DC-AUTH-007 | Avatar Preset Picker | preset-only (6 кіл); `State` Default / Selected / Error; без upload у v1 | P2 | F-3.2 C-7 | local `405:1769` (у kit ще немає) |
 
 ## DC-ACH — Achievements
@@ -172,17 +172,17 @@
 | DC-ROOM-012 | Host Control Bar | lobby (Start disabled/enabled) · session (Next / End). Старт лобі — нижня смуга: підказка хто не готовий і «Почати гру». Неактивний — `DC-BASE-001` Secondary Size L, усі готові і ≥3 — Primary Size L | P1 | F-5.9 · D05 · D07 | `16:142` |
 | DC-ROOM-013 | Host Session Shell | TV 1440 frame | P2 | F-5.16 · D07 | `31:546` |
 | DC-ROOM-014 | Player Session Shell | mobile 390 frame | P2 | F-5.17 | `31:732` |
-| DC-ROOM-015 | Prompt Card | prefix + statement · meta · `size` host/player | P1 | F-6.1 · D07 | `17:186` |
-| DC-ROOM-016 | Answer Control | yes/no · options · A/B · free text | P2 | BA kit §7 | `28:446` |
+| DC-ROOM-015 | Prompt Card | prefix + statement · meta · `size` host/player. Локальне дзеркало для F-6.1: «Я ніколи…» + формулювання + meta | P1 | F-6.1 · D07 | kit `17:186` · local `584:1430` |
+| DC-ROOM-016 | Answer Control | yes/no · options · A/B · free text. Локально для NHIE: Yes No `584:1434` (Так / Ні) і Locked `584:1447` | P2 | BA kit §7 · F-6.1 | kit `28:446` · local `584:1434` |
 | DC-ROOM-017 | Vote Control | pick player / funnier / rank | P2 | BA kit §7 | `28:507` |
-| DC-ROOM-018 | Live Reactions Strip | реакції під час раунду | P2 | F-6.30 · D07 | `28:557` |
+| DC-ROOM-018 | Live Reactions Strip | реакції під час раунду. Локально чотири чіпи 😂 🔥 👏 💀 | P2 | F-6.30 · D07 · F-6.1 | kit `28:557` · local `584:1470` |
 | DC-ROOM-019 | Session Results | podium | P2 | BA kit §7 | `30:533` |
-| DC-ROOM-020 | Leaderboard Row | rank · avatar · score | P2 | BA kit §7 | `30:520` |
+| DC-ROOM-020 | Leaderboard Row | rank · avatar · score. Локально: місце, ім’я, рахунок | P2 | BA kit §7 · F-6.1 | kit `30:520` · local `584:1466` |
 | DC-ROOM-021 | Reconnect Overlay | player / host | P2 | BA kit §7 | `28:606` |
-| DC-ROOM-022 | Round Progress | «Раунд N / M» | P2 | D07 | `28:633` |
+| DC-ROOM-022 | Round Progress | «Раунд N / M» | P2 | D07 · F-6.1 | kit `28:633` · local `584:1464` |
 | DC-ROOM-023 | Late Join Invite | compact code + QR / copy link | P2 | D07 | `28:646` |
-| DC-ROOM-024 | Catalog Game Card | назва · опис · діапазон · один тег · 18+ (`Show adult`); `State` Default/Selected. Публічний каталог, не лобі (лобі лишається ROOM-009) | P1 | F-6.53 | kit `105:1622` · local `444:13837` |
-| DC-ROOM-025 | Selected Catalog Game | «Обрана гра» + чотири дії (створити кімнату, долучитися по коду, історія ігор, детальніше правила); `Size` Desktop/Mobile; ті самі текстові властивості, що в ROOM-024 | P1 | F-6.53 | kit `105:1735` · local `444:14444` |
+| DC-ROOM-024 | Catalog Game Card | назва · опис · діапазон · мініатюра · 18+ (`Show adult`); тег у властивостях є, на каталозі прихований; `State` Default/Selected. Публічний каталог, не лобі (лобі лишається ROOM-009) | P1 | F-6.53 | kit `105:1622` · local `444:13837` |
+| DC-ROOM-025 | Selected Catalog Game | «Обрана гра» + мініатюра + чотири дії (створити кімнату, долучитися по коду, історія ігор, детальніше правила); `Size` Desktop/Mobile; тег прихований, як у ROOM-024 | P1 | F-6.53 | kit `105:1735` · local `444:14444` |
 | DC-ROOM-026 | Catalog Atmosphere | `Crop` Desktop 1440 / Mobile 390 — райські арки в хмарах, низ темний; абсолютний фон каталогу, не дерево досягнень (ACH-010) і не спіраль категорій (ACH-013) | P1 | F-6.53 | kit `105:1738` · local `444:13808` |
 | DC-ROOM-027 | Lobby Icon | `Icon` Copy / Share / Kick / Ready / Waiting. На картці лобі Ready і Waiting стоять поруч зі словом стану. Share у запрошці лобі не використовується | P1 | F-5.2 · F-5.3 · F-5.19 | kit `111:1594` · local `482:2121` |
 | DC-ROOM-028 | Lobby Invite | `Size=Desktop`: вертикальна картка. QR на всю ширину блоку, код + Copy, Telegram і WhatsApp (`DC-BASE-001` Secondary S), знизу на всю ширину червоне Primary L «Скасувати кімнату». Без системного поширення. `Size=Mobile`: компактний ряд «Код кімнати» + ABC123 + Copy + кнопка QR. Скасування на мобільному не в цій картці — червоний текст біля заголовка | P1 | F-5.2 · F-5.3 · F-5.12 · F-5.18 | local `510:1751` |
@@ -196,7 +196,7 @@
 | ID | Name | Variants / properties | Priority | Source | Figma node |
 |----|------|----------------------|----------|--------|------------|
 | DC-STD-001 | Practice Entry Card | Стендап · Імпро · Теорія | P2 | F-7.1 · D09 | `35:1014` |
-| DC-STD-002 | Timer | MM:SS · `state` running/warning/expired · `size` | P1 | F-7.2 · F-9.9 · D07 | `17:232` |
+| DC-STD-002 | Timer | MM:SS · `state` running/warning/expired · `size`. Локально пігулка `0:15` | P1 | F-7.2 · F-9.9 · D07 · F-6.1 | kit `17:232` · local `584:1462` |
 | DC-STD-003 | Triple Prompt | 1 prompt + 3 answer fields | P1 | F-7.2 · F-7.3 | `18:192` |
 | DC-STD-004 | Best Answer Picker | вибір 1 з 3 | P2 | F-7.4 | `35:1064` |
 | DC-STD-005 | Drill Summary | підсумок · disabled AI CTA | P2 | BA kit §8 | `35:1090` |
