@@ -1,6 +1,6 @@
 # COMPONENT-IDS — реєстр компонентів UI Kit
 
-> Version: 1.12 · 2026-10-09 (лобі F-5.2: ROOM-028…029, 031, 032 зібрані локально) · попередньо 1.11 (028…031 ще без Figma node) · Figma: [DivinaComediaUIKit](https://www.figma.com/design/7VS64TZ3mjVvxoaYF6ZHDk/DivinaComediaUIKit?node-id=0-1) (`fileKey 7VS64TZ3mjVvxoaYF6ZHDk`)
+> Version: 1.15 · 2026-10-24 (F-2.8 у kit: NAV-008 `118:3156`, NAV-009 іконка `118:3167`, MISC-006 `118:3172`, `Utilities` на NAV-001, іконка messages `118:3152`) · попередньо 1.14 (F-4.16) · 1.13 (F-2.8: NAV-008, NAV-009, MISC-006 і `Utilities` на NAV-001 зібрані локально) · Figma: [DivinaComediaUIKit](https://www.figma.com/design/7VS64TZ3mjVvxoaYF6ZHDk/DivinaComediaUIKit?node-id=0-1) (`fileKey 7VS64TZ3mjVvxoaYF6ZHDk`)
 > Джерела: BA [`docs/design/figma-make-moodboards-uikit.md`](../../DivinaComedia/docs/design/figma-make-moodboards-uikit.md) · [`briefs/screens-ux.md`](../briefs/screens-ux.md) · [`briefs/home-ux-locked.md`](../briefs/home-ux-locked.md) · D-промпти [`prompts/03-d-product-ui/`](../prompts/03-d-product-ui/)
 > Поверхня: **Front (Web)** — desktop 1440 (host / TV) · mobile 390 (player). CMS — поза kit (збирається з бібліотеки компонентів).
 
@@ -56,7 +56,7 @@
 | DC-FND-004 | Spacing | 4 · 8 · 12 · 16 · 24 · 32 · 48 | P1 | BA kit §1 | `3:51` |
 | DC-FND-005 | Radius | кнопка · інпут · картка · pill | P1 | BA kit §1 | `3:59` |
 | DC-FND-006 | Elevation | card · modal · toast · host overlay | P1 | BA kit §1 | `4:2` |
-| DC-FND-007 | Icons | P2+ (F-2.2, лише локальна копія `8itQZ…`): pause `318:135` · play `318:139`; nav · close · search · filter · vote · timer · copy · QR · leave · settings · arrow · check; P2: eye `21:5` · eye-off `21:11` · chevron-down `21:14` · settings `21:20` · mail `21:24` · edit `21:28` · trash `21:34` · lock `21:38` · mic `21:42` · heart `21:45` · smile `21:51` · crown `21:54` · refresh `21:58` · shuffle `21:65` · send `21:69` · link `21:73` · more `21:78` · flag `21:82` | P1 | BA kit §1 | `5:2` |
+| DC-FND-007 | Icons | P2+ (F-2.2, лише локальна копія `8itQZ…`): pause `318:135` · play `318:139`; nav · close · search · filter · vote · timer · copy · QR · leave · settings · arrow · check; P2: eye `21:5` · eye-off `21:11` · chevron-down `21:14` · settings `21:20` · mail `21:24` · edit `21:28` · trash `21:34` · lock `21:38` · mic `21:42` · heart `21:45` · smile `21:51` · crown `21:54` · refresh `21:58` · shuffle `21:65` · send `21:69` · link `21:73` · more `21:78` · flag `21:82` · thumbs-up `118:1584` · thumbs-down `118:1588` · messages `118:3152` | P1 | BA kit §1 · F-4.16 · F-2.8 | `5:2` |
 | DC-FND-008 | Motion | press · focus ring · timer tick · toast in/out — правила | P2 | BA kit §1 | `25:2` |
 | DC-FND-009 | Breakpoints | 1440 host / 390 player — правила масштабування | P2 | BA kit §1 | `25:39` |
 
@@ -101,13 +101,15 @@
 
 | ID | Name | Variants / properties | Priority | Source | Figma node |
 |----|------|----------------------|----------|--------|------------|
-| DC-NAV-001 | Top Bar / Home | wordmark «Божественна комедія» + avatar; `Size` 1440/390 · `Surface` Solid/Ghost (Ghost — на атмосфері Раю / порталі) | P1 | home-ux-locked §1 · Paradise PO 2026-10-08 | `14:2` |
+| DC-NAV-001 | Top Bar / Home | wordmark «Божественна комедія» + avatar; `Size` 1440/390 · `Surface` Solid/Ghost (Ghost — на атмосфері Раю / порталі). `Utilities` Off/On (Off — як було, default): On справа NAV-009 → NAV-008 → avatar, gap 12; на 390 з On лишається лише зірка без wordmark | P1 | home-ux-locked §1 · Paradise PO 2026-10-08 · F-2.7 · F-2.8 C-1 | kit `14:2` (On: `118:3374` / `118:3379` / `118:3384` / `118:3389`) · local `319:324` (On: `716:24185` / `716:24190` / `716:24195` / `716:24200`) |
 | DC-NAV-002 | Top Bar / Inner | back + context title + avatar · `size` 1440/390 | P1 | screens-ux | `14:19` |
 | DC-NAV-003 | Top Bar / Host | wordmark або room context + avatar + quiet destructive action | P1 | D05 · D07 | `14:40` |
 | DC-NAV-004 | Mobile Action Bar | player 390, sticky bottom CTA | P2 | D06 | `24:182` |
 | DC-NAV-005 | Back Link | drill → hub · `Label` (F-4.3: «Досягнення») | P2 | BA kit §4 · F-4.3 | `24:206` |
 | DC-NAV-006 | Account Menu | profile · logout · delete account | P2 | BA kit §4 | `24:217` |
 | DC-NAV-007 | Zone Nav Pills | — | retired | Home LOCK: зони = клімат, не tabs | |
+| DC-NAV-008 | Locale Switch | `Selected` UK/EN; пігулка 44, рамка `text/primary` 40 %, тло чорне 40 %, обрана опція кремова. Підписи «UK» / «EN» як у застосунку (`shell.locale.*`) | P1 | F-2.7 (реалізовано) | kit `118:3156` · local `716:24162` |
+| DC-NAV-009 | Feedback Entry | лише іконка `messages` 44×44, без підпису, на 1440 і на 390 (PO 2026-10-24); той самий стиль пігулки, що NAV-008; стоїть безпосередньо перед ним | P1 | F-2.8 C-1 | kit `118:3167` · local `716:24173` |
 
 ## DC-HOME — Home composites
 
@@ -133,7 +135,7 @@
 | DC-AUTH-003 | Profile Header | own (з email); праворуч «Вийти» + «Деактивувати акаунт»; без edit CTA | P2 | F-3.1 | kit `40:1386` · local `401:1316` |
 | DC-AUTH-004 | Profile Stats Strip | вечори · drills · турніри | P2 | BA kit §5 | `40:1397` |
 | DC-AUTH-005 | Public Profile Header | без email | P2 | BA kit §5 | `40:1392` |
-| DC-AUTH-006 | Achievement Showcase Grid | Completed на профілі: title · category · difficulty · «Виконали N%»; `State` Filled/Empty · `Size` Desktop/Mobile; без «Усі ачівки» і без write | P2 | F-3.1 C-3/C-6 | kit `40:1407` · local `401:1535` |
+| DC-AUTH-006 | Achievement Showcase Grid | Completed на профілі: title · category · difficulty · «Виконали N%»; `State` Filled/Empty · `Size` Desktop/Mobile; без «Усі ачівки» і без write. Картка `Showcase Item` (`401:1332`): опційні `Date` + `Show date` (default off — F-3.1 без дати) | P2 | F-3.1 C-3/C-6 · F-4.7 | kit `40:1407` · local `401:1535` |
 | DC-AUTH-007 | Avatar Preset Picker | preset-only (6 кіл); `State` Default / Selected / Error; без upload у v1 | P2 | F-3.2 C-7 | local `405:1769` (у kit ще немає) |
 
 ## DC-ACH — Achievements
@@ -141,7 +143,7 @@
 | ID | Name | Variants / properties | Priority | Source | Figma node |
 |----|------|----------------------|----------|--------|------------|
 | DC-ACH-001 | Category Card | без стрілки · icon 24 у wrap 32 (без clip) · назва (max 2 рядки) · «X з Y» + bar FILL · Compact 390: 4:3 (173×130), icon → назва → meta по центру · `State` Auth/Guest · `Size` Default/Compact | P1 | F-4.2 · D03 · Paradise PO 2026-10-08 | `17:195` |
-| DC-ACH-002 | Achievement Item | title на всю ширину · meta-ряд: складність · «Виконали N%» · spacer FILL · статус/дія справа; `State` Not Confirmed / Confirmed / Guest | P2 | BA kit §6 · F-4.3 · F-4.6 | `38:1216` |
+| DC-ACH-002 | Achievement Item | title на всю ширину · meta-ряд: складність · «Виконали N%» · spacer FILL · голос ACH-014 (`Show reaction`, default off; у Guest немає) · статус/дія справа; `State` Not Confirmed / Confirmed / Guest. Meta-ряд переноситься, якщо не влазить (390 + «Підтвердити»): дія стає під голосом праворуч | P2 | BA kit §6 · F-4.3 · F-4.6 · F-4.16 | kit `38:1216` · local `359:1041` |
 | DC-ACH-003 | Achievement Action | у meta-рядку справа: «Підтвердити» / Confirmed = лише галочка + icon cancel (без тексту «Підтверджено», без модалки); Confirming / Cancelling = spinner | P2 | BA kit §6 · F-4.3 C-12 · F-4.6 | `38:1155` |
 | DC-ACH-004 | Difficulty Filter | dropdown Closed/Open; `Show caption`; Field FILL (не FIXED 200); 1440 = caption + HUG 200; 390 = без caption, два FILL у рядку з gap 10 | P2 | BA kit §6 · F-4.3 | `70:1398` |
 | DC-ACH-005 | Status Filter | dropdown Closed/Open; `Show caption`; Field FILL; 390 = без caption, FILL у парі (value truncate ENDING) | P2 | BA kit §6 · F-4.3 | `70:1399` |
@@ -152,6 +154,7 @@
 | DC-ACH-010 | Atmosphere Field | `Crop` Desktop 1440 / Mobile 390 — дерево Раю на `zone/void`; абсолютний page bg, не chrome | P1 | F-4.2 · STYLE-LOCK Paradise | `76:2909` |
 | DC-ACH-011 | Suggest Entry | pill: plus · «Запропонувати ачівку» (390: «Запропонувати») · `text/primary` кремовий → F-4.10 | P2 | F-4.2 · F-4.3 toolbar · F-4.10 T-1 | `80:1382` |
 | DC-ACH-012 | Atmosphere Sinners | `Crop` Desktop 1440 / Mobile 390 — кривавий місяць, замок, троянди; абсолютний page bg категорії «Грішники», не chrome | P1 | F-4.13 · PO 2026-10-08 | local `435:1386` |
+| DC-ACH-014 | Reaction Vote | дві круглі кнопки 28 px — thumbs-up / thumbs-down (`bg/surface`, `border/default`, `icon/default`, `radius/full`). У картці ACH-002 перед дією; у раунді NHIE під «Відповідь уже зафіксовано.» з підписом «Оціни питання». Після голосу зникає цілком, обраного стану немає — значення не показується. Без сесії не показується | P2 | F-4.16 C-11 · C-14 | kit `118:1592` · local `716:1616` |
 | DC-ACH-013 | Atmosphere Paradise Spiral | `Crop` Desktop 1440 / Mobile 390 — золота спіраль-гелікс на `zone/void`; абсолютний page bg категорій Раю F-4.3 / F-4.6 / F-4.10 (≠ дерево DC-ACH-010, що лишається для F-4.2) | P1 | F-4.3 · PO 2026-10-08 | kit `106:2249` · local `444:1383` |
 
 ## DC-ROOM — Game framework
@@ -172,17 +175,17 @@
 | DC-ROOM-012 | Host Control Bar | lobby (Start disabled/enabled) · session (Next / End). Старт лобі — нижня смуга: підказка хто не готовий і «Почати гру». Неактивний — `DC-BASE-001` Secondary Size L, усі готові і ≥3 — Primary Size L | P1 | F-5.9 · D05 · D07 | `16:142` |
 | DC-ROOM-013 | Host Session Shell | TV 1440 frame | P2 | F-5.16 · D07 | `31:546` |
 | DC-ROOM-014 | Player Session Shell | mobile 390 frame | P2 | F-5.17 | `31:732` |
-| DC-ROOM-015 | Prompt Card | prefix + statement · meta · `size` host/player | P1 | F-6.1 · D07 | `17:186` |
-| DC-ROOM-016 | Answer Control | yes/no · options · A/B · free text | P2 | BA kit §7 | `28:446` |
+| DC-ROOM-015 | Prompt Card | prefix + statement · meta · `size` host/player. Локальне дзеркало для F-6.1: «Я ніколи…» + формулювання + meta | P1 | F-6.1 · D07 | kit `17:186` · local `584:1430` |
+| DC-ROOM-016 | Answer Control | yes/no · options · A/B · free text. Локально для NHIE: Yes No `584:1434` (Так / Ні) і Locked `584:1447` | P2 | BA kit §7 · F-6.1 | kit `28:446` · local `584:1434` |
 | DC-ROOM-017 | Vote Control | pick player / funnier / rank | P2 | BA kit §7 | `28:507` |
-| DC-ROOM-018 | Live Reactions Strip | реакції під час раунду | P2 | F-6.30 · D07 | `28:557` |
+| DC-ROOM-018 | Live Reactions Strip | реакції під час раунду. Локально чотири чіпи 😂 🔥 👏 💀 | P2 | F-6.30 · D07 · F-6.1 | kit `28:557` · local `584:1470` |
 | DC-ROOM-019 | Session Results | podium | P2 | BA kit §7 | `30:533` |
-| DC-ROOM-020 | Leaderboard Row | rank · avatar · score | P2 | BA kit §7 | `30:520` |
+| DC-ROOM-020 | Leaderboard Row | rank · avatar · score. Локально: місце, ім’я, рахунок | P2 | BA kit §7 · F-6.1 | kit `30:520` · local `584:1466` |
 | DC-ROOM-021 | Reconnect Overlay | player / host | P2 | BA kit §7 | `28:606` |
-| DC-ROOM-022 | Round Progress | «Раунд N / M» | P2 | D07 | `28:633` |
+| DC-ROOM-022 | Round Progress | «Раунд N / M» | P2 | D07 · F-6.1 | kit `28:633` · local `584:1464` |
 | DC-ROOM-023 | Late Join Invite | compact code + QR / copy link | P2 | D07 | `28:646` |
-| DC-ROOM-024 | Catalog Game Card | назва · опис · діапазон · один тег · 18+ (`Show adult`); `State` Default/Selected. Публічний каталог, не лобі (лобі лишається ROOM-009) | P1 | F-6.53 | kit `105:1622` · local `444:13837` |
-| DC-ROOM-025 | Selected Catalog Game | «Обрана гра» + чотири дії (створити кімнату, долучитися по коду, історія ігор, детальніше правила); `Size` Desktop/Mobile; ті самі текстові властивості, що в ROOM-024 | P1 | F-6.53 | kit `105:1735` · local `444:14444` |
+| DC-ROOM-024 | Catalog Game Card | назва · опис · діапазон · мініатюра · 18+ (`Show adult`); тег у властивостях є, на каталозі прихований; `State` Default/Selected. Публічний каталог, не лобі (лобі лишається ROOM-009) | P1 | F-6.53 | kit `105:1622` · local `444:13837` |
+| DC-ROOM-025 | Selected Catalog Game | «Обрана гра» + мініатюра + чотири дії (створити кімнату, долучитися по коду, історія ігор, детальніше правила); `Size` Desktop/Mobile; тег прихований, як у ROOM-024 | P1 | F-6.53 | kit `105:1735` · local `444:14444` |
 | DC-ROOM-026 | Catalog Atmosphere | `Crop` Desktop 1440 / Mobile 390 — райські арки в хмарах, низ темний; абсолютний фон каталогу, не дерево досягнень (ACH-010) і не спіраль категорій (ACH-013) | P1 | F-6.53 | kit `105:1738` · local `444:13808` |
 | DC-ROOM-027 | Lobby Icon | `Icon` Copy / Share / Kick / Ready / Waiting. На картці лобі Ready і Waiting стоять поруч зі словом стану. Share у запрошці лобі не використовується | P1 | F-5.2 · F-5.3 · F-5.19 | kit `111:1594` · local `482:2121` |
 | DC-ROOM-028 | Lobby Invite | `Size=Desktop`: вертикальна картка. QR на всю ширину блоку, код + Copy, Telegram і WhatsApp (`DC-BASE-001` Secondary S), знизу на всю ширину червоне Primary L «Скасувати кімнату». Без системного поширення. `Size=Mobile`: компактний ряд «Код кімнати» + ABC123 + Copy + кнопка QR. Скасування на мобільному не в цій картці — червоний текст біля заголовка | P1 | F-5.2 · F-5.3 · F-5.12 · F-5.18 | local `510:1751` |
@@ -196,7 +199,7 @@
 | ID | Name | Variants / properties | Priority | Source | Figma node |
 |----|------|----------------------|----------|--------|------------|
 | DC-STD-001 | Practice Entry Card | Стендап · Імпро · Теорія | P2 | F-7.1 · D09 | `35:1014` |
-| DC-STD-002 | Timer | MM:SS · `state` running/warning/expired · `size` | P1 | F-7.2 · F-9.9 · D07 | `17:232` |
+| DC-STD-002 | Timer | MM:SS · `state` running/warning/expired · `size`. Локально пігулка `0:15` | P1 | F-7.2 · F-9.9 · D07 · F-6.1 | kit `17:232` · local `584:1462` |
 | DC-STD-003 | Triple Prompt | 1 prompt + 3 answer fields | P1 | F-7.2 · F-7.3 | `18:192` |
 | DC-STD-004 | Best Answer Picker | вибір 1 з 3 | P2 | F-7.4 | `35:1064` |
 | DC-STD-005 | Drill Summary | підсумок · disabled AI CTA | P2 | BA kit §8 | `35:1090` |
@@ -233,6 +236,7 @@
 | DC-MISC-003 | Media Placeholder | картки без арту | P2 | BA kit §10 | `43:37` |
 | DC-MISC-004 | Age Gate Copy | 18+ на реєстрації | P2 | BA kit §10 | `43:50` |
 | DC-MISC-005 | Landing Hero | hero + CTA cluster | P2 | BA kit §10 | `43:83` |
+| DC-MISC-006 | Feedback Form | `State` Empty / Filled / Validation / Error. Заголовок «Зворотний звʼязок» + закрити; поле «Повідомлення» 144 px, плейсхолдер «Будь-який ваш текст», лічильник «N / 500» справа; Validation — червона рамка і текст помилки поля; Error — банер `DC-FB-002` Danger без дії, текст лишається. «Скасувати» / «Надіслати» Size L. 480 на 1440, FILL на 390. Відкривається поверх поточної поверхні, маршрут не змінює | P1 | F-2.8 · PO 2026-10-24 | kit `118:3172` · local `716:24269` |
 
 ---
 
